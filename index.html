@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tugas Saya</h1>
+            <p id="date-display"></p>
+        </header>
+
+        <form id="todo-form">
+            <div class="input-group">
+                <input type="text" id="todo-input" placeholder="Tambahkan tugas disini" required>
+                <input type="date" id="todo-date" required>
+            </div>
+            <button type="submit" id="add-btn">Tambah Tugas</button>
+        </form>
+
+        <button id="delete-all-btn" class="danger-btn">🗑 Hapus Semua</button>
+
+        <div class="controls-row">
+            <div class="sort-container">
+                <label for="sort-select">Urutkan:</label>
+                <select id="sort-select">
+                    <option value="newest">Terbaru</option>
+                    <option value="oldest">Terlama</option>
+                    <option value="alpha">A-Z (Abjad)</option>
+                </select>
+            </div>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Semua Tugas</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Selesai</button>
+            </div>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+        <footer>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
